@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Maurya | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #24292e;
+      color: #fff;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    header h1 a {
+      color: #fff;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      padding: 5px 10px;
+      color: #fff;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #61dafb;
+      border-bottom: 2px solid #61dafb;
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container nav{
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #24292e;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar ul li {
+        margin: 10px 0;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+
+      .navbar ul.active {
+        display: flex;
+        width:100%;
+      }
+    }
+
+    /* Section styles */
+    section {
+      padding: 60px 0;
+      background-color: #fff;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #24292e;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .skill-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .skill {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      font-weight: 600;
+      color: #24292e;
+    }
+
+    .skill:hover{
+      color:#fff;
+      transform:scale3d(0.3s);
+      background-color: rgb(10, 178, 10);
+      cursor: pointer;
+      transition: 0.7s ease-in-out;
+    }
+
+    .project {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    .project h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #24292e;
+    }
+
+    .project p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-top: 10px;
+      background-color: #070a08;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .project a:hover {
+      transform: rotate(-3deg);
+    }
+
+    .contact ul li a:hover{
+      text-decoration: underline;
+    }
+
+
+    footer {
+      background-color: #24292e;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="#">Abhishek Maurya</a></h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Welcome! I'm Abhishek Maurya, a passionate Frontend Developer Intern dedicated to crafting visually captivating and functional web applications. My journey into web development began with a fascination for how websites work, which quickly blossomed into a deep-seated passion for creating intuitive and engaging user interfaces.</p>
+      <p>With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating seamless user experiences. I particularly enjoy working with modern frameworks like React, enabling me to bring dynamic and interactive elements to life. My commitment to continuous learning drives me to stay current with the latest trends and best practices in the industry.</p>
+      <p>Beyond coding, I have a keen interest in exploring new technologies, diving deep into UX/UI design principles, and contributing to open-source projects. I thrive on challenges and relish the opportunity to collaborate with others to develop innovative solutions. Whether it's a simple project or a complex application, I approach every task with enthusiasm and a commitment to excellence.</p>
+      <p>Feel free to explore my projects below and connect with me on LinkedIn or GitHub. Let's collaborate and create something extraordinary together!</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Git</div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Sample Brand</h3>
+        <p>It is a simple website I created using HTML, CSS, and JavaScript.</p>
+        <a href="https://github.com/AbhishekSMaurya/Tech-website" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Library Management System</h3>
+        <p>I created this using Python's pandas library. It is a menu-driven program with all the features present in it.</p>
+        <a href="https://github.com/AbhishekSMaurya/Menu-driven-whole" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, please reach out through any of the platforms below:</p>
+      <ul>
+        <li>Email: <a href="mailto:ab2005maurya@gmail.com">ab2005maurya@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/your-profile/" target="_blank">LinkedIn Profile</a></li>
+        <li>GitHub: <a href="https://github.com/your-github" target="_blank">GitHub Profile</a></li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Abhishek Maurya. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // script.js
+    const menuIcon = document.querySelector('.menu-icon');
+    const navbarUl = document.querySelector('.navbar ul');
+
+    menuIcon.addEventListener('click', () => {
+      navbarUl.classList.toggle('active');
+    });
+  </script>
+  </body>
+  </html>
